@@ -1,7 +1,27 @@
 module Coop
   class Repository
+    attr_reader :scheduled_months
+
+    def initialize
+      current_month = Date.current.month
+      @scheduled_months = [current_month + 1, current_month + 3, current_month + 5]
+    end
+
     def get_answer(code:)
       questions[code]
+    end
+
+    def get_user(code:)
+      code
+    end
+
+    def scheduled_months_for(user:)
+      @scheduled_months
+    end
+
+    def schedule(user:, date:)
+      month = date.month
+      @scheduled_months = (scheduled_months << month).uniq
     end
 
     private
