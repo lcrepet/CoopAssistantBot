@@ -17,6 +17,9 @@ module CoopAssistantBot
     config.autoload_paths << "#{Rails.root}/app/models/events"
     config.autoload_paths << "#{Rails.root}/app/request_builders"
     config.autoload_paths << "#{Rails.root}/app/actions"
+    config.autoload_paths += Dir[Rails.root.join('lib', '**/')]
+
+    config.eager_load_paths << Rails.root.join('lib', '**/')
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
