@@ -1,0 +1,5 @@
+fr:
+  help: 'Posez-moi une question !'
+  incomprehension: Je suis désolée, je n'ai pas compris votre question.
+  hello: 'Hello !'
+  bye: 'Au revoir !'
