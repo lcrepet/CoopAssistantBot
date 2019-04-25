@@ -1,0 +1,2 @@
+class DemoScenario < Scenario
+end
