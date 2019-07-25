@@ -39,6 +39,7 @@ class MessagesController < ApplicationController
 
   def request_builders
     [
+      CoopFaqBuilder,
       SmallTalkBuilder,
       HelpBuilder
     ]
