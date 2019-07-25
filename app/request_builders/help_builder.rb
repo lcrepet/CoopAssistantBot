@@ -1,11 +1,11 @@
 class HelpBuilder < RequestBuilder
   class << self
     def valid?(_event)
-      # TODO
+      true
     end
 
     def build_request(_event)
-      # TODO
+      SendHelp.new.execute
     end
   end
 end
