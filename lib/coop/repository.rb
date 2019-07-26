@@ -15,6 +15,10 @@ module Coop
       code
     end
 
+    def auth_user
+      SecureRandom.hex
+    end
+
     def scheduled_months_for(user:)
       @scheduled_months
     end
