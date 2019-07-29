@@ -35,14 +35,14 @@ class Action
   end
 
   def link_button(message:, link_name:, link_href:)
-    button_hash_array = [button_hash(link_name, 'web_url', link_href)]
-    generic_buttons(message, button_hash_array)
+    button_hash_array = [button_hash(title: link_name, type: 'web_url', value: link_href)]
+    generic_buttons(message: message, button_hash_array: button_hash_array)
   end
 
   def yes_or_no_buttons(message:)
     button_hash_array = [button_hash(I18n.t('affirmative'), 'postback', I18n.t('affirmative')),
                          button_hash(I18n.t('negative'), 'postback', I18n.t('negative'))]
-    generic_buttons(message, button_hash_array)
+    generic_buttons(message: message, button_hash_array: button_hash_array)
   end
 
   def list_element_hash(title:, image_url:, subtitle:, button_hash:)

@@ -4,7 +4,7 @@ module Coop
 
     def initialize
       current_month = Date.current.month
-      @scheduled_months = [current_month + 1, current_month + 3, current_month + 5]
+      @scheduled_months = [(current_month + 1) % 12, (current_month + 3) % 12, (current_month + 5) % 12]
     end
 
     def get_answer(code:)
