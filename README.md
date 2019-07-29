@@ -11,18 +11,18 @@ There is a new food coop in town! And they want a chatbot on their Facebook page
 Usage
 -----
 Once you have cloned the project, do the usual stuffs:
-    bundle install
-    bundle exec db:create
-    bundle exec db:migrate
+``bundle install
+bundle exec db:create
+bundle exec db:migrate``
 
 Setup your [Messenger
 app](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup)
-and you [SAP CAI chatbot](https://cai.tools.sap/) (see [Session
+and your [SAP CAI chatbot](https://cai.tools.sap/) (see [Session
 3](https://github.com/lcrepet/Faberschool-Chatbots/tree/master/session_3)).
 Copy ``.env_dist`` to ``.env``, set the matching settings.
 
 Execute:
-    bundle exec rails server
+``bundle exec rails server``
 
 Your chatbot is alive! \o/
 
@@ -47,6 +47,11 @@ one of them on the branch ``solution`` at the corresponding tag.
 * fourth_level: the members can ask the chatbot about their schedules. For
   that, the chatbot needs to know to which member it talks! The Coop API allows
   you to log the members via OAuth and manage their account.
+
+TODO:
+* fifth_level: schedule new shift through the chatbot. Use the scenarios (the
+exchange between the members and the chatbot could be composed by more than
+2 messages and the chatbot could need memory) and the Coop API.
 
 
 Requirements
